@@ -7,13 +7,17 @@ const Navbar = () => (
       <img src='logo.png' className='heart' />
       <img src='logotext.png' className='text' />
     </div>
-
-    <Link to='/history' className='link'>
-      <h3>Log</h3>
-    </Link>
-    <Link to='/' className='link'>
-      <h3>Home</h3>
-    </Link>
+    <div className='spacer'>
+      <Link to='/' className='link'>
+        <h3>Home</h3>
+      </Link>
+      <Link to='/history' className='link'>
+        <h3>Log</h3>
+      </Link>
+      <Link to='/about' className='link'>
+        <h3>About base64</h3>
+      </Link>
+    </div>
   </div>
 )
 export default Navbar

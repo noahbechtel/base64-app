@@ -9,7 +9,7 @@ const mapToProps = state => {
 const mapDispatch = dispatch => {
   return {
     getEntryList: () => dispatch(getEntries()),
-    deleteEntry: id => dispatch(deleteEntry(id))
+    deleteEntry: () => dispatch(deleteEntry())
   }
 }
 class Log extends Component {
@@ -40,6 +40,22 @@ class Log extends Component {
     const entries = this.state.entries
     return (
       <div>
+        <div className='spacer'>
+          <div className='log'>
+            <h2>History</h2>
+            <div className='spacer'>
+              <button
+                onClick={() => {
+                  this.props.deleteEntry()
+                  this.props.getEntryList()
+                  this.props.history.push('/')
+                }}
+              >
+                Clear History
+              </button>
+            </div>
+          </div>
+        </div>
         {entries ? (
           entries.map(entry => {
             return (
@@ -49,14 +65,6 @@ class Log extends Component {
                   <h3 className='entry'>{entry.content}</h3>
                   <p>{entry.description}</p>
                   <div className='buttons2'>
-                    <button
-                      onClick={() => {
-                        this.props.deleteEntry(entry.id)
-                        this.props.getEntryList()
-                      }}
-                    >
-                      Delete
-                    </button>
                     <button
                       type='button'
                       className='pressy'

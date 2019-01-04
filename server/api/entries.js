@@ -28,13 +28,10 @@ router.post('/', async (req, res, next) => {
   }
 })
 
-router.delete('/:entryId', async (req, res, next) => {
+router.delete('/', async (req, res, next) => {
   try {
-    const entry = await Entry.findById(req.params.entryId)
-    await entry.destroy(entry)
-
-    const entryFind = await Entry.findAll()
-    res.json(entryFind)
+    await Entry.destroy({ where: { sessionId: req.session.id } })
+    res.status(201)
   } catch (error) {
     next(error)
   }

@@ -22,9 +22,9 @@ export const makeEntry = entry => async () => {
   } catch (err) {}
 }
 
-export const deleteEntry = id => async () => {
+export const deleteEntry = () => async () => {
   try {
-    await axios.delete(`/api/base64/${id}`)
+    await axios.delete(`/api/base64`)
   } catch (err) {
     console.error(err)
   }

@@ -47,7 +47,7 @@ class Base64 extends Component {
 
   render () {
     return (
-      <div>
+      <div className='spacer'>
         <div className='base64'>
           <form
             className='form'

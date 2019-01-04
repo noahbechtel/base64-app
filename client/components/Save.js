@@ -30,58 +30,60 @@ class Save extends Component {
   }
   render () {
     return (
-      <div className='base64'>
-        <form className='form'>
-          <div>
-            <h3>Title:</h3>
-            <input
-              placeholder='Slap a title on that badboy'
-              type='text'
-              className='input'
-              name='Title'
-              onChange={evt => {
-                this.setState({
-                  title: evt.target.value
-                })
-              }}
-            />
-            <h3>Content:</h3>
-            <input
-              type='text'
-              name='Content'
-              className='input'
-              defaultValue={this.props.content}
-              onChange={evt => {
-                this.setState({
-                  content: evt.target.value
-                })
-              }}
-            />
-            <h3>Description:</h3>
-            <input
-              type='text'
-              name='Content'
-              className='input'
-              placeholder='Tell me about it'
-              onChange={evt => {
-                this.setState({
-                  description: evt.target.value
-                })
-              }}
-            />
-            <button
-              type='button'
-              onClick={evt => {
-                evt.preventDefault()
-                this.props.makeEntry(this.state)
-                this.props.getEntryList()
-                this.props.history.push('/')
-              }}
-            >
-              Save
-            </button>
-          </div>
-        </form>
+      <div className='spacer'>
+        <div className='base64'>
+          <form className='form'>
+            <div>
+              <h3>Title:</h3>
+              <input
+                placeholder='Slap a title on that badboy'
+                type='text'
+                className='input'
+                name='Title'
+                onChange={evt => {
+                  this.setState({
+                    title: evt.target.value
+                  })
+                }}
+              />
+              <h3>Content:</h3>
+              <input
+                type='text'
+                name='Content'
+                className='input'
+                defaultValue={this.props.content}
+                onChange={evt => {
+                  this.setState({
+                    content: evt.target.value
+                  })
+                }}
+              />
+              <h3>Description:</h3>
+              <input
+                type='text'
+                name='Content'
+                className='input'
+                placeholder='Tell me about it'
+                onChange={evt => {
+                  this.setState({
+                    description: evt.target.value
+                  })
+                }}
+              />
+              <button
+                type='button'
+                onClick={evt => {
+                  evt.preventDefault()
+                  this.props.makeEntry(this.state)
+                  this.props.getEntryList()
+                  this.props.history.push('/')
+                }}
+              >
+                Save
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     )
   }
