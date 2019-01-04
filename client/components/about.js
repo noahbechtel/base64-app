@@ -10,10 +10,10 @@ const About = () => (
     <div className='aboutbody'>
       <h3>
         Base64 is a somewhat simple encoding that allows transfer of binary data
-        over mediums tha can only parse printable characters. One of the first
+        over mediums that can only parse printable characters. One of the first
         implementations was to allows computers with the same OS communicate
         over a dial-up connection. Today it is still heavily used in E-mail MIME
-        protocol and when transfering binary data across networks. However, a
+        protocol and when transferring binary data across networks. However, a
         new use for it has recently emerged across Reddit; a way to encode links
         to prevent them from being mapped and removed by bot moderators and nosy
         corporations.
