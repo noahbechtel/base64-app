@@ -76,7 +76,8 @@ form {
   background-color: whitesmoke;
   -webkit-box-shadow: 5px 5px 0px 0px #A5A5A5; 
 box-shadow: 5px 5px 0px 0px #A5A5A5;
-
+display: flex;
+flex-flow:column;
 
 }
 
@@ -89,13 +90,26 @@ box-shadow: 5px 5px 0px 0px #A5A5A5;
   background-color: whitesmoke;
   -webkit-box-shadow: 5px 5px 0px 0px #A5A5A5; 
 box-shadow: 5px 5px 0px 0px #A5A5A5;
-width: 30em;
+width: 70em;
 padding-left: 1em;
 padding-top: 1em;
 padding-bottom: 1em;
+-webkit-border-radius: 7px;
+border-radius: 7px;
 
 }
-input{
+
+.buttons{
+  display:flex;
+  justify-content: space-between;
+
+}
+.buttons2{
+  display:flex;
+  justify-content: left;
+
+}
+.input{
   font-size: inherit;
   text-align: center;
   font-weight: bold;
@@ -111,7 +125,19 @@ input{
   
   
 }
-
+.specialI{
+  font-size: inherit;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-decoration:none;
+  border: 3px solid #2D2D2D ;
+  color: #2D2D2D;
+  position: relative;
+  padding: 10px 17px 11px;
+  cursor: pointer;
+  width: 30em;
+}
 
 
 button{   font-size: inherit;

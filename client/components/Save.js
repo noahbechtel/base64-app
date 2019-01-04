@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Log from './log'
 import { connect } from 'react-redux'
 import { makeEntry, getEntries } from '../store/entry'
 
@@ -38,6 +37,7 @@ class Save extends Component {
             <input
               placeholder='Slap a title on that badboy'
               type='text'
+              className='input'
               name='Title'
               onChange={evt => {
                 this.setState({
@@ -49,6 +49,7 @@ class Save extends Component {
             <input
               type='text'
               name='Content'
+              className='input'
               defaultValue={this.props.content}
               onChange={evt => {
                 this.setState({
@@ -60,6 +61,7 @@ class Save extends Component {
             <input
               type='text'
               name='Content'
+              className='input'
               placeholder='Tell me about it'
               onChange={evt => {
                 this.setState({

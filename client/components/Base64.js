@@ -3,6 +3,7 @@ import Save from './Save'
 import Log from './log'
 import { connect } from 'react-redux'
 import { getEntries, setContent } from '../store/entry'
+new ClipboardJS('.btn')
 
 const mapToProps = state => {
   return { entries: state.entry.entries }
@@ -46,7 +47,7 @@ class Base64 extends Component {
 
   render () {
     return (
-      <div className='base64main'>
+      <div>
         <div className='base64'>
           <form
             className='form'
@@ -55,9 +56,10 @@ class Base64 extends Component {
               this.handleSubmit(evt)
             }}
           >
-            <div>
+            <div className='plzbuttons'>
               <h2>Convert: </h2>
               <input
+                className='input'
                 type='text'
                 placeholder='Whip out some Base64 or plain text...'
                 onChange={evt => {
@@ -69,16 +71,29 @@ class Base64 extends Component {
               />
               <h2>Output:</h2>
               <input
+                className='specialI'
+                id='copyboard'
                 type='text'
                 name='result'
-                placeholder='...and I will hit you with the inverse'
+                placeholder='...AND ILL HIT YOU WITH THE INVERSE'
                 value={
                   this.isBase64(this.state.text)
                     ? atob(this.state.text)
                     : btoa(this.state.text)
                 }
               />
-              <button type='Submit'>Remember</button>
+
+              <div className='buttons'>
+                <button type='Submit'>Log this Entry!</button>
+
+                <button
+                  type='button'
+                  className='btn'
+                  data-clipboard-target='#copyboard'
+                >
+                  Copy to ClipBoard!
+                </button>
+              </div>
             </div>
           </form>
         </div>
