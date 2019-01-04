@@ -1,5 +1,10 @@
 body {
-  font-family: sans-serif;
+  
+  align-content: center;
+  font-family:'Inconsolata', 'Helvetica', 'Arial',sans-serif;
+  color: #2D2D2D;
+  background: lightcoral  no-repeat scroll 9px 0px;
+  
 }
 
 a {
@@ -19,3 +24,115 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+
+.base64 {
+  display:flex;
+  flex-direction: row;
+}
+
+.heart {
+  width:80px;
+  height:70px;
+}
+.text{
+  width:80px;
+  height:relative;
+}
+
+.logo{
+display: flex;
+flex-direction: column;
+}
+
+.link {
+  display:flex;
+  flex-flow: wrap;
+  margin: 1%;
+  background-color: whitesmoke;
+  font-size: inherit;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  /*Button Color & Border*/
+  border: 3px solid #2D2D2D ;
+  color: #2D2D2D;
+  
+  position: relative;
+  display: inline-block;
+  padding: 0px 10px 0px;
+  cursor: pointer;
+  width: auto;
+  
+}
+
+.link:hover {
+  top:2px;
+  left:2px;
+    }
+
+form {
+  background-color: whitesmoke;
+  -webkit-box-shadow: 5px 5px 0px 0px #A5A5A5; 
+box-shadow: 5px 5px 0px 0px #A5A5A5;
+
+
+}
+
+.spacer{
+  border: 3px solid transparent;
+}
+
+.list{
+ 
+  background-color: whitesmoke;
+  -webkit-box-shadow: 5px 5px 0px 0px #A5A5A5; 
+box-shadow: 5px 5px 0px 0px #A5A5A5;
+width: 30em;
+padding-left: 1em;
+padding-top: 1em;
+padding-bottom: 1em;
+
+}
+input{
+  font-size: inherit;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration:none;
+  border: 3px solid #2D2D2D ;
+  color: #2D2D2D;
+  position: relative;
+  padding: 10px 17px 11px;
+  cursor: pointer;
+  width: 30em;
+  
+  
+}
+
+
+
+button{   font-size: inherit;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration:none;
+  /*Button Color & Border*/
+  border: 3px solid #2D2D2D ;
+  color: #2D2D2D;
+  
+  position: relative;
+  /* display: inline-block; */
+  padding: 10px 17px 11px;
+  cursor: pointer;
+  width: auto;
+  
+      }
+      button:hover {
+        top:2px;
+        left:2px;
+          }
+
