@@ -76,8 +76,11 @@ form {
   -webkit-box-shadow: 5px 5px 0px 0px #A5A5A5; 
 box-shadow: 5px 5px 0px 0px #A5A5A5;
 display: flex;
-flex-flow:column;
+flex-direction:column;
 
+}
+.form2{
+  display: inline-block;
 }
 
 .about {
@@ -88,6 +91,7 @@ width: 45%;
 display: flex;
 flex-flow:column;
 text-align: center;
+align-content: initial;
 }
 .aboutbody {
   background-color: whitesmoke;

@@ -32,7 +32,7 @@ class Save extends Component {
     return (
       <div className='spacer'>
         <div className='base64'>
-          <form className='form'>
+          <form>
             <div>
               <h3>Title:</h3>
               <input
@@ -70,17 +70,19 @@ class Save extends Component {
                   })
                 }}
               />
-              <button
-                type='button'
-                onClick={evt => {
-                  evt.preventDefault()
-                  this.props.makeEntry(this.state)
-                  this.props.getEntryList()
-                  this.props.history.push('/')
-                }}
-              >
-                Save
-              </button>
+              <div className='about'>
+                <button
+                  type='button'
+                  onClick={evt => {
+                    evt.preventDefault()
+                    this.props.makeEntry(this.state)
+                    this.props.getEntryList()
+                    this.props.history.push('/')
+                  }}
+                >
+                  Save
+                </button>
+              </div>
             </div>
           </form>
         </div>

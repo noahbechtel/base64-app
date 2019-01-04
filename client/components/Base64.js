@@ -50,13 +50,12 @@ class Base64 extends Component {
       <div className='spacer'>
         <div className='base64'>
           <form
-            className='form'
             onSubmit={evt => {
               evt.preventDefault()
               this.handleSubmit(evt)
             }}
           >
-            <div className='plzbuttons'>
+            <div>
               <h2>Convert: </h2>
               <input
                 className='input'
