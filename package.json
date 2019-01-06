@@ -1,7 +1,7 @@
 {
-  "name": "base64",
+  "name": "boilermaker",
   "version": "1.0.0",
-  "description": "A Base64 decoder/encoder",
+  "description": "Some boilerplate code to get you started - get shakin'!",
   "engines": {
     "node": ">= 7.0.0"
   },
